@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "daniel_day_lewis.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
