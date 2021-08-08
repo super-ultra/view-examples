@@ -20,11 +20,12 @@ struct MovieView: View {
                     .lineLimit(2)
                     .font(.headline)
                     .foregroundColor(Color(UIColor.label))
-                Spacer().frame(height: 2)
+                Spacer().frame(height: 4)
                 Text(model.year)
                     .lineLimit(1)
                     .font(.subheadline)
                     .foregroundColor(Color(UIColor.label))
+                Spacer().frame(height: 4)
                 Text(model.character)
                     .lineLimit(2)
                     .font(.caption)
@@ -36,7 +37,7 @@ struct MovieView: View {
                 .lineLimit(1)
                 .foregroundColor(model.ratingColor)
         }
-        .padding(8)
+        .padding([.top, .bottom], 8)
     }
     
 }

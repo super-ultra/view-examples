@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B196869026C08841006C1207 /* DiscographyMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196868F26C08841006C1207 /* DiscographyMovie.swift */; };
+		B196869426C08C88006C1207 /* MovieView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B196869326C08C88006C1207 /* MovieView+Utils.swift */; };
 		B1A8E59926891B6300FE1DAC /* ViewExampleFlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8E59826891B6300FE1DAC /* ViewExampleFlatMap.swift */; };
 		B1A8E59B26891B8D00FE1DAC /* ViewExampleProvider+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8E59A26891B8D00FE1DAC /* ViewExampleProvider+SwiftUI.swift */; };
 		B1B3D86226C03F18003DEEAD /* ViewExampleLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3D86126C03F18003DEEAD /* ViewExampleLayout.swift */; };
 		B1B3D86426C03FB9003DEEAD /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B3D86326C03FB9003DEEAD /* PersonView.swift */; };
 		B1C36A9F26C05D8700EF6798 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C36A9E26C05D8700EF6798 /* MovieView.swift */; };
 		B1C36AA126C05ECB00EF6798 /* Color+Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C36AA026C05ECB00EF6798 /* Color+Rating.swift */; };
-		B1C36AA326C05FCB00EF6798 /* Color+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C36AA226C05FCB00EF6798 /* Color+Utils.swift */; };
 		B1C763AB26868EE000125449 /* ViewExamplesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C763AA26868EE000125449 /* ViewExamplesApp.swift */; };
 		B1C763AD26868EE000125449 /* FilmographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C763AC26868EE000125449 /* FilmographyView.swift */; };
 		B1C763AF26868EE100125449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C763AE26868EE100125449 /* Assets.xcassets */; };
@@ -34,13 +35,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B196868F26C08841006C1207 /* DiscographyMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyMovie.swift; sourceTree = "<group>"; };
+		B196869326C08C88006C1207 /* MovieView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieView+Utils.swift"; sourceTree = "<group>"; };
 		B1A8E59826891B6300FE1DAC /* ViewExampleFlatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExampleFlatMap.swift; sourceTree = "<group>"; };
 		B1A8E59A26891B8D00FE1DAC /* ViewExampleProvider+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewExampleProvider+SwiftUI.swift"; sourceTree = "<group>"; };
 		B1B3D86126C03F18003DEEAD /* ViewExampleLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExampleLayout.swift; sourceTree = "<group>"; };
 		B1B3D86326C03FB9003DEEAD /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
 		B1C36A9E26C05D8700EF6798 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 		B1C36AA026C05ECB00EF6798 /* Color+Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Rating.swift"; sourceTree = "<group>"; };
-		B1C36AA226C05FCB00EF6798 /* Color+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Utils.swift"; sourceTree = "<group>"; };
 		B1C763A726868EE000125449 /* ViewExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C763AA26868EE000125449 /* ViewExamplesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExamplesApp.swift; sourceTree = "<group>"; };
 		B1C763AC26868EE000125449 /* FilmographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmographyView.swift; sourceTree = "<group>"; };
@@ -72,6 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B196868E26C08830006C1207 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B196868F26C08841006C1207 /* DiscographyMovie.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B196869226C08C73006C1207 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1C36AA026C05ECB00EF6798 /* Color+Rating.swift */,
+				B196869326C08C88006C1207 /* MovieView+Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		B1A8E59726891B5000FE1DAC /* ViewExamples */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,20 +105,12 @@
 		B1B3D86026C03E0F003DEEAD /* FilmographyView */ = {
 			isa = PBXGroup;
 			children = (
+				B196869226C08C73006C1207 /* Utils */,
 				B1C763AC26868EE000125449 /* FilmographyView.swift */,
 				B1B3D86326C03FB9003DEEAD /* PersonView.swift */,
 				B1C36A9E26C05D8700EF6798 /* MovieView.swift */,
-				B1C36AA026C05ECB00EF6798 /* Color+Rating.swift */,
 			);
 			path = FilmographyView;
-			sourceTree = "<group>";
-		};
-		B1C36AA426C05FCE00EF6798 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				B1C36AA226C05FCB00EF6798 /* Color+Utils.swift */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		B1C7639E26868EE000125449 = {
@@ -159,7 +170,7 @@
 		B1C763DD26868FBA00125449 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B1C36AA426C05FCE00EF6798 /* Utils */,
+				B196868E26C08830006C1207 /* Data */,
 				B1B3D86026C03E0F003DEEAD /* FilmographyView */,
 				B1A8E59726891B5000FE1DAC /* ViewExamples */,
 				B1C763AA26868EE000125449 /* ViewExamplesApp.swift */,
@@ -275,7 +286,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A8E59B26891B8D00FE1DAC /* ViewExampleProvider+SwiftUI.swift in Sources */,
-				B1C36AA326C05FCB00EF6798 /* Color+Utils.swift in Sources */,
+				B196869426C08C88006C1207 /* MovieView+Utils.swift in Sources */,
+				B196869026C08841006C1207 /* DiscographyMovie.swift in Sources */,
 				B1C763DC26868F6400125449 /* ViewExampleProvider.swift in Sources */,
 				B1C36AA126C05ECB00EF6798 /* Color+Rating.swift in Sources */,
 				B1C763AD26868EE000125449 /* FilmographyView.swift in Sources */,

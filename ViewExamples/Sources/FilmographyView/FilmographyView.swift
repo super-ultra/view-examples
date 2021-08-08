@@ -5,6 +5,7 @@ struct FilmographyView: View {
     
     struct Model {
         var person: PersonView.Model
+        var movies: [MovieView.Model]
     }
     
     let model: Model
@@ -12,6 +13,9 @@ struct FilmographyView: View {
     var body: some View {
         List {
             PersonView(model: model.person)
+            ForEach(model.movies, id: \.title) { movie in
+                MovieView(model: movie)
+            }
         }
         .navigationTitle("Filmography")
     }
@@ -24,7 +28,10 @@ extension FilmographyView.Model {
     
     enum Examples {
         static let `default` = FilmographyView.Model(
-            person: .Examples.default
+            person: .Examples.default,
+            movies: DiscographyMovie.Examples.defaultDiscography.map {
+                MovieView.Model($0)
+            }
         )
     }
     
@@ -33,8 +40,8 @@ extension FilmographyView.Model {
 extension FilmographyView {
     
     struct Examples: ViewExamplesProvider {
-        let views: [PersonView] = [
-            PersonView(model: .Examples.default)
+        let views: [FilmographyView] = [
+            FilmographyView(model: .Examples.default)
         ]
     }
     
