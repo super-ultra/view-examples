@@ -1,6 +1,6 @@
 import SwiftUI
 
-public extension ViewExamplesProvider where ViewType: View {
+extension ViewExamplesProvider where ViewType: View {
     
     func usingColorSchemes(_ colorSchemes: [ColorScheme]) -> ViewExampleFlatMap<Self, AnyView> {
         return flatMap { view in

@@ -1,13 +1,13 @@
 import Foundation
 import CoreGraphics
 
-public enum ViewExampleLayout: RawRepresentable {
+enum ViewExampleLayout: RawRepresentable {
     
-    public enum Device: String {
+    enum Device: String {
         case iPhoneSE = "iPhone SE (1st generation)"
         case iPhone8 = "iPhone 8"
         case iPhone12 = "iPhone 12"
-        case iPadMini = "iPad mini (5th generation)"
+        case iPad = "iPad (9th generation)"
         case iPadPro12_9 = "iPad Pro (12.9-inch) (4th generation)"
     }
     
@@ -15,12 +15,12 @@ public enum ViewExampleLayout: RawRepresentable {
     case sizeThatFits
     case fixed(width: CGFloat? = nil, height: CGFloat? = nil)
     
-    public init?(rawValue: String) {
+    init?(rawValue: String) {
         assert(false)
         return nil
     }
     
-    public var rawValue: String {
+    var rawValue: String {
         switch self {
         case .device(let device):
             return "device-\(device)"
@@ -33,10 +33,10 @@ public enum ViewExampleLayout: RawRepresentable {
         }
     }
     
-    public typealias RawValue = String
+    typealias RawValue = String
 }
 
-public extension ViewExampleLayout.Device {
+extension ViewExampleLayout.Device {
     
     var size: CGSize {
         switch self {
@@ -46,8 +46,8 @@ public extension ViewExampleLayout.Device {
             return CGSize(width: 375, height: 667)
         case .iPhone12:
             return CGSize(width: 390, height: 844)
-        case .iPadMini:
-            return CGSize(width: 768, height: 1024)
+        case .iPad:
+            return CGSize(width: 820, height: 1180)
         case .iPadPro12_9:
             return CGSize(width: 1024, height: 1366)
         }
@@ -55,7 +55,7 @@ public extension ViewExampleLayout.Device {
     
 }
 
-public extension ViewExampleLayout {
+extension ViewExampleLayout {
     
     static func fixedWidth(_ device: Device) -> ViewExampleLayout {
         return .fixed(width: device.size.width)

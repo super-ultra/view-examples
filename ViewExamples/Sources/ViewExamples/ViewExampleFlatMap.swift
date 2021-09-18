@@ -1,8 +1,8 @@
 import Foundation
 
-public final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, OutputView>: ViewExamplesProvider {
+final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, OutputView>: ViewExamplesProvider {
     typealias InputView = InputProvider.ViewType
-    public typealias ViewType = OutputView
+    typealias ViewType = OutputView
         
     init(_ inputProvider: InputProvider, transform: @escaping (InputView) -> [OutputView]) {
         self.inputProvider = inputProvider
@@ -11,7 +11,7 @@ public final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, Outpu
     
     // MARK: - ViewExampleProvider
     
-    public var views: [OutputView] {
+    var views: [OutputView] {
         inputProvider.views.flatMap(transform)
     }
     
@@ -22,7 +22,7 @@ public final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, Outpu
     
 }
 
-public extension ViewExamplesProvider {
+extension ViewExamplesProvider {
     
     func flatMap<OutputView>(
         _ transform: @escaping (Self.ViewType) -> [OutputView]

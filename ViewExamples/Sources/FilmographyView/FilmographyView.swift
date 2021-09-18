@@ -53,7 +53,7 @@ extension FilmographyView {
 struct FilmographyView_Previews: PreviewProvider {
     static var previews: some View {
         FilmographyView.Examples().previews(
-            layouts: [.device(.iPhone12), .device(.iPadMini)]
+            layouts: [.device(.iPhone12), .device(.iPad)]
         )
     }
 }
