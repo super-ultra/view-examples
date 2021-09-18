@@ -25,7 +25,7 @@ struct MovieView: View {
                     .lineLimit(1)
                     .font(.subheadline)
                     .foregroundColor(Color(UIColor.label))
-                Spacer().frame(height: 4)
+                Spacer().frame(height: 6)
                 Text(model.character)
                     .lineLimit(2)
                     .font(.caption)
@@ -33,7 +33,7 @@ struct MovieView: View {
             }
             Spacer()
             Text(model.rating)
-                .fontWeight(.heavy)
+                .fontWeight(.black)
                 .lineLimit(1)
                 .foregroundColor(model.ratingColor)
         }
