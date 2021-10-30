@@ -11,7 +11,7 @@ class PersonViewTests: XCTestCase {
     }
 
     func testAll() throws {
-        PersonView.Examples().assertSnapshotViews(
+        PersonView.Examples().assertSnapshots(
             layouts: [.fixedWidth(.iPhone8)]
         )
     }

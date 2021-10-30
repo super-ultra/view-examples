@@ -11,7 +11,7 @@ class MovieViewTests: XCTestCase {
     }
 
     func testAll() throws {
-        MovieView.Examples().assertSnapshotViews(
+        MovieView.Examples().assertSnapshots(
             layouts: [.fixedWidth(.iPhone8)]
         )
     }

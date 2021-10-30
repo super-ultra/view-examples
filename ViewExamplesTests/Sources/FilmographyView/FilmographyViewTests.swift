@@ -11,7 +11,7 @@ class FilmographyViewTests: XCTestCase {
     }
 
     func testAll() throws {
-        FilmographyView.Examples().assertSnapshotViews(
+        FilmographyView.Examples().assertSnapshots(
             layouts: [.device(.iPhone12), .device(.iPad)]
         )
     }

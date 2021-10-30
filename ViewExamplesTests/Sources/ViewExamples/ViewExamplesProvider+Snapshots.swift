@@ -5,7 +5,7 @@ import SnapshotTesting
 
 extension ViewExampleProvider where ViewType: SwiftUI.View {
     
-    func assertSnapshotViews(
+    func assertSnapshots(
         layouts: [ViewExampleLayout] = [.sizeThatFits],
         colorSchemes: [ColorScheme] = [.light, .dark],
         file: StaticString = #file,
