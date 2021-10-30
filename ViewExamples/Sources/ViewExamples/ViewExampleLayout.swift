@@ -1,8 +1,7 @@
 import Foundation
 import CoreGraphics
 
-enum ViewExampleLayout: RawRepresentable {
-    
+enum ViewExampleLayout {
     enum Device: String {
         case iPhoneSE = "iPhone SE (1st generation)"
         case iPhone8 = "iPhone 8"
@@ -14,13 +13,11 @@ enum ViewExampleLayout: RawRepresentable {
     case device(Device)
     case sizeThatFits
     case fixed(width: CGFloat? = nil, height: CGFloat? = nil)
+}
+
+extension ViewExampleLayout: CustomStringConvertible {
     
-    init?(rawValue: String) {
-        assert(false)
-        return nil
-    }
-    
-    var rawValue: String {
+    var description: String {
         switch self {
         case .device(let device):
             return "device-\(device)"
@@ -33,7 +30,6 @@ enum ViewExampleLayout: RawRepresentable {
         }
     }
     
-    typealias RawValue = String
 }
 
 extension ViewExampleLayout.Device {

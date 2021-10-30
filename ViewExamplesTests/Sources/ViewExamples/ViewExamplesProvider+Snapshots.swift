@@ -48,7 +48,7 @@ private extension String {
         layout: ViewExampleLayout,
         userInterfaceStyle: UIUserInterfaceStyle
     ) -> String {
-        return "\(String(describing: ViewType.self))-\(layout.rawValue)-\(userInterfaceStyle.name)"
+        return "\(String(describing: ViewType.self))-\(layout)-\(userInterfaceStyle.name)"
     }
     
 }
