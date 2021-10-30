@@ -5,11 +5,7 @@ extension ViewExamplesProvider where ViewType: View {
     func usingColorSchemes(_ colorSchemes: [ColorScheme]) -> ViewExampleFlatMap<Self, AnyView> {
         return flatMap { view in
             colorSchemes.map {
-                AnyView(
-                    view.environment(\.colorScheme, $0)
-                        .colorScheme($0)
-                        .preferredColorScheme($0)
-                )
+                AnyView(view.preferredColorScheme($0))
             }
         }
     }
@@ -19,7 +15,10 @@ extension ViewExamplesProvider where ViewType: View {
             styles.map {
                 switch $0 {
                 case .device(let device):
-                    return AnyView(view.previewLayout(.device).previewDevice(.init(rawValue: device.rawValue)))
+                    return AnyView(
+                        view.previewLayout(.device)
+                            .previewDevice(.init(rawValue: device.rawValue))
+                    )
                 case .sizeThatFits:
                     return AnyView(view.previewLayout(.sizeThatFits))
                 case let .fixed(width, height):
