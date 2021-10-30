@@ -85,7 +85,7 @@ extension MovieView.Model {
 
 extension MovieView {
     
-    struct Examples: ViewExamplesProvider {
+    struct Examples: ViewExampleProvider {
         let views: [MovieView] = [
             MovieView(model: .Examples.default),
             MovieView(model: .Examples.normalRating),

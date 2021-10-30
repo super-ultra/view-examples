@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ViewExamplesProvider {
+protocol ViewExampleProvider {
     associatedtype ViewType
     
     var views: [ViewType] { get }

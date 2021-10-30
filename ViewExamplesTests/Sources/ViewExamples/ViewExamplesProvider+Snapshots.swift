@@ -3,7 +3,7 @@ import SnapshotTesting
 
 @testable import ViewExamples
 
-extension ViewExamplesProvider where ViewType: SwiftUI.View {
+extension ViewExampleProvider where ViewType: SwiftUI.View {
     
     func assertSnapshotViews(
         layouts: [ViewExampleLayout] = [.sizeThatFits],

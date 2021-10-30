@@ -1,6 +1,6 @@
 import Foundation
 
-final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, OutputView>: ViewExamplesProvider {
+final class ViewExampleFlatMap<InputProvider: ViewExampleProvider, OutputView>: ViewExampleProvider {
     typealias InputView = InputProvider.ViewType
     typealias ViewType = OutputView
         
@@ -22,7 +22,7 @@ final class ViewExampleFlatMap<InputProvider: ViewExamplesProvider, OutputView>:
     
 }
 
-extension ViewExamplesProvider {
+extension ViewExampleProvider {
     
     func flatMap<OutputView>(
         _ transform: @escaping (Self.ViewType) -> [OutputView]

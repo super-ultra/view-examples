@@ -39,7 +39,7 @@ extension FilmographyView.Model {
 
 extension FilmographyView {
     
-    struct Examples: ViewExamplesProvider {
+    struct Examples: ViewExampleProvider {
         let views: [FilmographyView] = [
             FilmographyView(model: .Examples.default)
         ]

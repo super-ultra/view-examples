@@ -67,7 +67,7 @@ extension PersonView.Model {
 
 extension PersonView {
     
-    struct Examples: ViewExamplesProvider {
+    struct Examples: ViewExampleProvider {
         let views: [PersonView] = [
             PersonView(model: .Examples.default),
             PersonView(model: .Examples.longName)
